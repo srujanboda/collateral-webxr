@@ -3,5 +3,3 @@ flask-socketio
 eventlet
 flask-compress
 gunicorn
-gevent
-gevent-websocket
