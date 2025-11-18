@@ -1,10 +1,11 @@
 # MUST BE FIRST
 import eventlet
-eventlet.monkey_patch()  
+eventlet.monkey_patch()
 
 from flask import Flask
 from flask_socketio import SocketIO, emit, join_room
 from flask_compress import Compress
+
 
 app = Flask(__name__)
 Compress(app)
