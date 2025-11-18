@@ -41,3 +41,12 @@ def on_answer(data):
 def on_candidate(data):
     print("🌐 Received ICE candidate → forwarding")
     emit("candidate", data["candidate"], room=data["room"], include_self=False)
+
+
+# Do NOT run socketio.run() here.
+# Gunicorn will load "app", and the worker class will handle WebSockets.
+
+if __name__ != "__main__":
+    # this lets gunicorn import app without running socketio.run()
+    pass
+
